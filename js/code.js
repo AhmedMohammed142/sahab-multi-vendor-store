@@ -7,19 +7,19 @@ let number = 0;
 
 plusbtn.addEventListener('click', function () {
   number++;
-  result.textContent = number;
+  result.innerHTML = number;
   result.style.fontSize = '50px';
 });
 
 minusbtn.addEventListener('click', function () {
   if (number > 0) {
     number--;
-    result.textContent = number;
+    result.innerHTML = number;
     result.style.fontSize = '40px';
   }
 });
 
 resetbtn.addEventListener('click', function () {
-  result.textContent = 0;
-  result.style.fontSize = '28px';
+  result.innerHTML = 0;
+  result.style.fontSize = '16px';
 });
