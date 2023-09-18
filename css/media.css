@@ -1,0 +1,153 @@
+/** @format */
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  div h1.product-name {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .advertising-home,
+  .advertising-bottom {
+    height: 210px;
+    width: 95%;
+  }
+
+  .links,
+  .link {
+    font-size: 16px;
+  }
+  div h1.product-name {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar > .container {
+    flex-direction: row-reverse;
+  }
+
+  p.text {
+    font-size: 13px;
+  }
+
+  .advertising-home,
+  .advertising-bottom {
+    height: 156px;
+    width: 95%;
+  }
+
+  .links,
+  .link {
+    font-size: 16px;
+  }
+
+  div h1.product-name {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar > .container {
+    flex-direction: row-reverse;
+  }
+
+  p.text {
+    font-size: 12px;
+  }
+
+  .advertising-home,
+  .advertising-bottom {
+    height: 104px;
+    width: 95%;
+  }
+
+  .links,
+  .link {
+    font-size: 16px;
+  }
+
+  .container .row .left-side {
+    display: none;
+  }
+
+  div h1.product-name {
+    font-size: 24px;
+  }
+  .footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar > .container {
+    flex-direction: row-reverse;
+  }
+
+  .collapse .navbar-nav .nav-item .nav-link.plus {
+    display: flex;
+  }
+
+  .collapse .navbar-nav .nav-item .nav-link.btn-plus {
+    display: none;
+  }
+
+  p.text {
+    font-size: 11px;
+  }
+
+  .advertising-home,
+  .advertising-bottom {
+    height: 104px;
+    width: 95%;
+  }
+
+  .links,
+  .link {
+    font-size: 16px;
+  }
+
+  .container .row .left-side {
+    display: none;
+  }
+
+  div h1.product-name {
+    font-size: 24px;
+  }
+
+  .footer {
+    display: none;
+  }
+}

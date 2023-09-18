@@ -1,0 +1,534 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(105, 103, 102);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.header-line {
+  background: linear-gradient(
+    to right,
+    rgba(255, 208, 7) 0%,
+    rgba(255, 208, 7) 12.5%,
+    rgba(192, 156, 221, 1) 62.5%,
+    rgba(192, 156, 221, 1) 75%
+  );
+  height: 5px;
+}
+
+.container {
+  width: 75%;
+}
+
+.navbar-toggler {
+  padding: 0;
+  border: 1px solid #e5e5e5;
+}
+
+.navbar-brand {
+  margin-left: 0;
+}
+
+.menu-icon {
+  width: 2.5em;
+  height: 1.5em;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f7f7f;
+}
+
+.navbar-nav .nav-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.navbar-expand-lg .navbar-nav {
+  align-items: center;
+  white-space: nowrap;
+}
+
+.collapse .navbar-nav .nav-item .nav-link .btn-login-as-vendor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(73, 185, 117);
+  height: 32px;
+  padding: 0px 16px;
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.collapse .navbar-nav .nav-item .nav-link.plus,
+.collapse .navbar-nav .nav-item .nav-link.search,
+.collapse .navbar-nav .nav-item .nav-link.fav,
+.collapse .navbar-nav .nav-item .nav-link.cart,
+.collapse .navbar-nav .nav-item .nav-link.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(105, 103, 102);
+}
+
+.collapse .navbar-nav .nav-item .nav-link.plus {
+  display: none;
+}
+
+p.text {
+  font-size: 14px;
+}
+
+.advertising-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/background-image.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  border-radius: 4px;
+}
+
+.hr-top-header {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.container .nav-link {
+  display: flex;
+  padding: 0.5rem 0;
+}
+.nav-link .links {
+  color: #868e96;
+}
+
+.link {
+  color: rgb(105, 103, 102);
+}
+
+.links,
+.link {
+  font-size: 20px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #7c7b7b;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-size: 85% 85%;
+  opacity: 1;
+}
+
+.carousel .carousel-inner .carousel-item {
+  cursor: zoom-in;
+  width: 100%;
+  height: 100%;
+}
+
+.container .row .left-side .images div img {
+  width: 100%;
+  height: 100%;
+}
+
+.counter-pages {
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  margin: auto;
+  cursor: default;
+  white-space: nowrap;
+  font-weight: bold;
+  width: 25%;
+}
+
+div h1.product-name {
+  font-size: 40px;
+  line-height: 48px;
+  color: rgb(54, 52, 51);
+}
+
+.btn {
+  width: 140px;
+  color: rgb(54, 52, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(154, 153, 153);
+  height: 32px;
+  padding: 0px 16px;
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
+
+.price {
+  color: rgb(105, 103, 102);
+  font-size: 20px;
+}
+
+.price-number {
+  font-size: 16px;
+}
+
+.vendor-name {
+  margin-top: 1em;
+  color: rgb(105, 103, 102);
+  font-size: 1.2em;
+}
+
+.description,
+.attributes,
+.additional-description {
+  padding: 32px 24px;
+  border-radius: 2px 2px 4px 4px;
+  margin-bottom: 16px;
+  border-width: 0px 1px 1px;
+  border-color: rgb(205, 204, 204);
+  border-style: solid;
+  margin-top: 20px;
+}
+
+.description {
+  box-shadow: rgb(216 176 142) 0px -4px;
+}
+
+.attributes {
+  box-shadow: rgb(255 208 7) 0px -4px;
+  font-size: 13px;
+}
+
+.additional-description {
+  box-shadow: rgb(192 156 221) 0px -4px;
+}
+
+.color-black {
+  color: rgb(54, 52, 51);
+}
+
+.container-fluid .more-items {
+  background-color: #f9f7f6;
+}
+
+.more-items .card {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 6px rgb(192 192 192);
+  display: block;
+  border-bottom: 1px solid rgb(239, 239, 239);
+  padding: 16px;
+  margin: 0 0.5rem;
+}
+
+.card .image {
+  width: 100%;
+  height: 163px;
+  background-color: #f9f7f6;
+  border-radius: 4px;
+}
+
+.image .card-img-top {
+  border-radius: 4px;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.card .card-body {
+  padding: 10px;
+}
+
+.card .card-body .card-title {
+  background-color: #ddd;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.card .card-body .sub-title {
+  margin-bottom: 0.75rem;
+}
+
+.card .card-body .card-text {
+  font-size: 12px;
+}
+
+.more-items .card .card-body .price {
+  background-color: #f9f7f6;
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 2px;
+  font-weight: bold;
+  color: rgb(54, 52, 51);
+}
+
+.card .card-body .discount-original-price {
+  background-color: #f9f7f6;
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+
+.card .card-body .discount {
+  border-left: solid 1px;
+  padding-left: 2px;
+  border-color: #dddddd;
+  color: rgb(54, 52, 51);
+}
+
+.more-items .card .card-body .original-price del {
+  color: rgb(54, 52, 51);
+}
+
+.advertising-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/bottom-adv.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  border-radius: 4px;
+}
+
+.footer .container .row .col h5 {
+  color: rgb(54, 52, 51);
+}
+
+.footer .container .row .col .row .col div h3 {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer .container .row .col .row .col div p {
+  font-weight: 400;
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer .container .row .col p,
+.footer .container .row .col .footer .container .row .col p {
+  padding-bottom: 5px;
+  color: rgb(105, 103, 102);
+  font-size: 18px;
+}
+.footer .container .row .col p {
+  font-size: 16px;
+}
+
+.footer .container .row .col .input-sub {
+  display: flex;
+  align-items: center;
+}
+
+.footer .container .row .col .input-sub .whatsapp-input {
+  width: 100%;
+  height: 32px;
+  padding: 10px;
+  color: rgb(105, 103, 102);
+}
+
+.footer .container .row .col .input-sub .sub-btn {
+  background: #7e57c6;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+  padding: 0 12px;
+  font-size: 15px;
+  margin-right: 8px;
+  color: #fff;
+  white-space: nowrap;
+  height: 32px;
+}
+
+.footer .container .row .col .text-social-media {
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.footer .container .row .col .icons-contact {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+}
+
+.footer .container .row .col .icons-contact .icon {
+  padding: 12px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.footer .container .row .col .icons-contact .facebook-icon {
+  background-color: #3c5a99;
+}
+
+.footer .container .row .col .icons-contact .instagram-icon {
+  background-color: #815dc7;
+  margin-right: 15px;
+}
+/* .footer {
+  margin-bottom: 1em;
+}
+
+.footer .footer-footer {
+  padding: 20px 200px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer .footer-footer .information,
+.footer .footer-footer .profile,
+.footer .footer-footer .whatsapp-list {
+  width: 20%;
+}
+
+.footer .footer-footer .contactus h5,
+.footer .footer-footer .information h5,
+.footer .footer-footer .profile h5,
+.footer .footer-footer .whatsapp-list h5 {
+  color: rgb(54, 52, 51);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer .footer-footer .contactus p {
+  color: rgb(105, 103, 102);
+  font-size: 18px;
+}
+.footer .footer-footer .contactus .all-info-contactus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .footer-footer .contactus .other-contactinfo {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.footer .footer-footer .contactus .other-contactinfo div {
+  margin-top: 10px;
+}
+
+.footer .footer-footer .contactus .other-contactinfo div h3 {
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.footer .footer-footer .contactus .other-contactinfo div p {
+  font-weight: 400;
+  margin: 0;
+  font-size: 15px;
+}
+
+.footer .footer-footer .information a p,
+.footer .footer-footer .profile a p,
+.footer .footer-footer .whatsapp-list p {
+  padding-bottom: 5px;
+  color: rgb(105, 103, 102);
+  font-size: 18px;
+}
+.footer .footer-footer .whatsapp-list p {
+  font-size: 16px;
+}
+
+.footer .footer-footer .whatsapp-list .input-sub {
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-footer .whatsapp-list .input-sub .whatsapp-input {
+  width: 100%;
+  height: 32px;
+  padding: 10px;
+  color: rgb(105, 103, 102);
+}
+
+.footer .footer-footer .whatsapp-list .input-sub .sub-btn {
+  background: #7e57c6;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+  padding: 0 12px;
+  font-size: 15px;
+  margin-right: 8px;
+  color: #fff;
+  white-space: nowrap;
+  height: 32px;
+}
+
+.footer .footer-footer .whatsapp-list .text-social-media {
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.footer .footer-footer .whatsapp-list .icons-contact {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+}
+
+.footer .footer-footer .whatsapp-list .icons-contact .icon {
+  padding: 12px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.footer .footer-footer .whatsapp-list .icons-contact .facebook-icon {
+  background-color: #3c5a99;
+}
+
+.footer .footer-footer .whatsapp-list .icons-contact .instagram-icon {
+  background-color: #815dc7;
+  margin-right: 15px;
+}
+
+.footer .end-footer {
+  text-align: center;
+  color: rgb(105, 103, 102);
+  font-size: 18px;
+} */
