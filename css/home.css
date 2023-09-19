@@ -20,31 +20,27 @@ a {
   height: 5px;
 }
 
-nav {
-  padding: 0 200px;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.container {
+  width: 75%;
 }
 
-nav .logo {
-  cursor: pointer;
+.navbar-toggler {
+  border: 1px solid #e5e5e5;
 }
 
-nav .links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 40%;
+.menu-icon {
+  width: 2.5em;
+  height: 1.5em;
+  font-size: 1.25rem;
+  color: #7f7f7f;
 }
 
-nav a button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: none;
-  color: rgb(255, 255, 255);
+.navbar-nav .nav-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.collapse .navbar-nav .nav-item .nav-link .btn-login-as-vendor {
   background-color: rgb(73, 185, 117);
   height: 32px;
   padding: 0px 16px;
@@ -54,27 +50,25 @@ nav a button {
   cursor: pointer;
 }
 
-nav a button .plus-icon {
-  width: 16px;
-  height: 16px;
-  padding-left: 16px;
-}
-
-nav .search,
-nav .fav,
-nav .cart,
-nav .login {
+.collapse .navbar-nav .nav-item .nav-link.plus,
+.collapse .navbar-nav .nav-item .nav-link.search,
+.collapse .navbar-nav .nav-item .nav-link.fav,
+.collapse .navbar-nav .nav-item .nav-link.cart,
+.collapse .navbar-nav .nav-item .nav-link.login {
+  color: rgb(105, 103, 102);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: rgb(105, 103, 102);
 }
 
-nav a .text {
-  margin-top: 7px;
-  font-size: 18px;
-  color: rgb(105, 103, 102);
+.number {
+  background-color: #7600d9;
+  width: 20px;
+  height: 20px;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+.collapse .navbar-nav .nav-item .nav-link.plus {
+  display: none;
 }
 
 .main {
