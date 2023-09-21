@@ -14,6 +14,8 @@ p {
   margin: 0;
 }
 
+/* NavBar Section */
+
 .header-line {
   background: linear-gradient(
     to right,
@@ -123,6 +125,148 @@ p.text {
   margin-right: 0.7rem;
 }
 
+.container-fluid.main {
+  background-image: url('../img/slider-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 360px;
+  margin-top: 20px;
+}
+
+.container-fluid.main .welcome {
+  width: 340px;
+  border-radius: 6px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px;
+  padding: 25px;
+  top: 15px;
+  left: 200px;
+}
+
+.container-fluid.main .welcome .text-welcome {
+  color: rgb(54, 52, 51);
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.container-fluid.main .welcome .description {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #868e96;
+}
+
+.container-fluid.main .welcome form .inputs {
+  color: rgb(54, 52, 51);
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.container-fluid.main .welcome form .phone-number,
+.container-fluid.main .welcome form .fullname {
+  padding: 8px;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  margin-top: 5px;
+}
+
+.container-fluid.main .welcome form .send {
+  background-color: #7600d9;
+  font-size: 17px;
+  border-radius: 6px;
+}
+
+.categories {
+  background-color: #f9f7f6;
+}
+
+.categories .container .explore-items {
+  font-size: 22px;
+  color: rgb(54, 52, 51);
+}
+
+.categories .container a {
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 5px;
+  color: rgb(105, 103, 102);
+}
+
+.categories .container .items {
+  margin-top: 50px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  overflow-y: hidden;
+}
+
+.categories .container .items .item {
+  width: 105px;
+  height: 115px;
+}
+
+.categories .container .items .item a img {
+  box-shadow: 0 4px 3px -2px grey;
+}
+
+.categories .container .items .item a .name-items {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.items::-webkit-scrollbar {
+  width: 8px;
+  background-color: white;
+  height: 10px;
+}
+
+.items::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 8px;
+}
+
+.items::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, #4182c3),
+    color-stop(0.72, #4182c3),
+    color-stop(0.86, #4182c3)
+  );
+}
+
+.container-fluid.carding {
+  background-color: #f9f7f6;
+}
+
+.container-fluid.carding .container .row .cols .card {
+  box-shadow: rgb(0 0 0 / 25%) 0px 1px 0px 0px;
+  border-radius: 4px;
+}
+
+.container-fluid.carding .container .row .cols .card a img.card-img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.container-fluid.carding .container .row .cols .card a .card-body {
+  padding: 1.25rem;
+}
+
+.container-fluid.carding .container .row .cols .card a .card-body .card-title {
+  margin-bottom: 0.75rem;
+  color: rgb(54, 52, 51);
+  font-size: 1.25rem;
+}
+
+.container-fluid.advertising {
+  background-color: #f9f7f6;
+}
+
+/* Footer Section */
+
 .footer .container .row h5 {
   color: rgb(54, 52, 51);
 }
@@ -201,6 +345,9 @@ p.text {
   .navbar .dropdown .dropdown-menu {
     min-width: 50rem;
   }
+  .container-fluid.main .welcome {
+    left: 45px;
+  }
 }
 
 @media screen and (min-width: 993px) and (max-width: 1200px) {
@@ -211,8 +358,13 @@ p.text {
   .navbar-nav {
     flex-direction: row;
   }
+
   .navbar .dropdown .dropdown-menu {
     min-width: 47rem;
+  }
+
+  .container-fluid.main .welcome {
+    left: 45px;
   }
 }
 
@@ -233,8 +385,12 @@ p.text {
     font-size: 13px;
   }
 
-  .dropdown {
+  .dropdown-top {
     display: none;
+  }
+
+  .container-fluid.main .welcome {
+    left: 45px;
   }
 }
 
@@ -255,8 +411,12 @@ p.text {
     font-size: 12px;
   }
 
-  .dropdown {
+  .dropdown-top {
     display: none;
+  }
+
+  .container-fluid.main .welcome {
+    left: 140px;
   }
 }
 
@@ -285,7 +445,11 @@ p.text {
     font-size: 11px;
   }
 
-  .dropdown {
+  .dropdown-top {
     display: none;
+  }
+
+  .container-fluid.main .welcome {
+    left: 85px;
   }
 }

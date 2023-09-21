@@ -262,11 +262,6 @@ a {
   font-size: 17px;
 }
 
-.advs-section {
-  padding: 20px 200px;
-  background-color: #f9f7f6;
-}
-
 .cards .card a .card-title {
   margin-bottom: 0.75rem;
   font-weight: bold;
@@ -274,6 +269,10 @@ a {
   font-size: 1.25em;
   text-align: center;
   padding: 1.25rem;
+}
+.advs-section {
+  padding: 20px 200px;
+  background-color: #f9f7f6;
 }
 
 .footer {

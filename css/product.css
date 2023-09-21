@@ -15,6 +15,8 @@ p {
   margin: 0;
 }
 
+/* NavBar Section */
+
 .header-line {
   background: linear-gradient(
     to right,
@@ -188,7 +190,7 @@ div h1.product-name {
   color: rgb(54, 52, 51);
 }
 
-.btn {
+.btns {
   width: 140px;
   color: rgb(54, 52, 51);
   background-color: rgb(255, 255, 255);
@@ -214,6 +216,13 @@ div h1.product-name {
   margin-top: 1em;
   color: rgb(105, 103, 102);
   font-size: 1.2em;
+}
+
+.modal-footer .btn-login {
+  cursor: pointer;
+  background-color: #7600d9;
+  border-color: #7600d9;
+  color: #fff;
 }
 
 .description,
@@ -324,6 +333,8 @@ div h1.product-name {
   height: 250px;
   border-radius: 4px;
 }
+
+/* Footer Section */
 
 .footer .container .row h5 {
   color: rgb(54, 52, 51);
