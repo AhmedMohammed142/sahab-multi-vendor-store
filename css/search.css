@@ -386,6 +386,31 @@ p.text {
   border-radius: 2px;
 }
 
+.pagination {
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination .page-item {
+  margin: 0 10px;
+}
+
+.pagination .page-item .page-link.page-1 {
+  background: #666;
+  color: #fff;
+  border-color: #444;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
+  cursor: default;
+}
+
+a.page-link.next {
+  background: rgb(65, 130, 195);
+}
+
+a.page-link.next span {
+  color: #fff;
+}
+
 .container-fluid.products-section .container .row .cols .ads-products {
   padding: 16px;
   margin-bottom: 16px;
