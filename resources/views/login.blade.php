@@ -7,19 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>أكورد | تسجيل الدخول</title>
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
-      integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
-      crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/login.css" />
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}" />
   </head>
   <body>
     <div class="login-section">
       <div class="container">
         <div class="row g-0">
           <div class="col-lg-6 col-md-6 col-sm-12 right-side">
-            <img src="img/logo.png" alt="" class="logo" width="140" />
+            <img src="{{ asset('assets/img/logo.png') }}" alt="" class="logo" width="140" />
             <h1 class="title-login text-center">تسجيل الدخول</h1>
             <form>
               <div class="mb-3">
@@ -49,7 +46,7 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 left-side">
             <img
-              src="img/login-2.jpg"
+              src="{{ asset('assets/img/login-2.jpg') }}"
               class="img-left-side"
               width="100%"
               height="100%"
@@ -58,9 +55,6 @@
         </div>
       </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -1,577 +1,18 @@
-<!-- @format -->
-<!DOCTYPE html>
-<html lang="en" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>أكورد | صفحة البحث</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
-      integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
-      crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/search.css" />
-  </head>
-  <body>
-    <div class="header-line"></div>
+  @extends('header_footer')
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container">
-        <div class="d-flex align-items-center justify-content-center">
-          <a class="navbar-brand ps-0" href="#"
-            ><img src="img/logo.png" width="140" alt=""
-          /></a>
-          <div class="dropdown dropdown-top mx-3 mt-2">
-            <a
-              class="dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false">
-              التصنيفات
-            </a>
-            <div class="dropdown-menu" id="website_categories">
-              <div class="row">
-                <div class="col-md-12 pr-0">
-                  <span class="dropdown-item-direction position-absolute"
-                    ><i class="fa fa-angle-double-up"></i>
-                  </span>
-                  <div
-                    class="dropdown-item parent text-start fst-normal fw-bold ms-2"
-                    data-id="1"
-                    data-action="getChildrenCategory">
-                    الأثاث المنزلي
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <a class="dropdown-item child" href="#" data-id="240"
-                        >فرشات نوم</a
-                      >
-                    </div>
-                    <div class="col-md-4">
-                      <a class="dropdown-item child" href="#" data-id="274"
-                        >ملحقات</a
-                      >
-                    </div>
-                    <div class="col-md-4">
-                      <a class="dropdown-item child" href="#" data-id="273"
-                        >فرش عربي</a
-                      >
-                    </div>
-                    <div class="col-md-4">
-                      <a class="dropdown-item child" href="#" data-id="268"
-                        >طاولات</a
-                      >
-                    </div>
-                    <div class="col-md-4">
-                      <a class="dropdown-item child" href="#" data-id="229"
-                        >أطقم كنب</a
-                      >
-                    </div>
-                    <div class="col-md-4">
-                      <a class="dropdown-item child" href="#" data-id="96"
-                        >أطقم نوم</a
-                      >
-                    </div>
-                  </div>
-                </div>
+  @section('title')
 
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-up"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="2"
-                      data-action="getChildrenCategory">
-                      الأجهزة الكهربائية
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="275"
-                          >جوالات</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="269"
-                          >فروش غاز</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="153"
-                          >الثلاجات</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="155"
-                          >الغسالات</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="211"
-                          >شاشات التلفاز</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="162"
-                          >مكيفات</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="146"
-                          >أفران</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="148"
-                          >خلاطات ومفارم</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="242"
-                          >دفايات</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="154"
-                          >فريزر</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="156"
-                          >مكواة</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="161"
-                          >مكنسة كهربائية</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="241"
-                          >شفاطات</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="243"
-                          >كمكم</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="244"
-                          >سخان المياه</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="266"
-                          >ملحقات</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  صفحة البحث
 
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-up"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="3"
-                      data-action="getChildrenCategory">
-                      صالات الأفراح
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="233"
-                          >قاعة سهرة شباب</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="232"
-                          >قاعة حنة</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="231"
-                          >قاعة خطوبة</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="21"
-                          >قاعة أفراح</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  @endsection
 
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-up"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="4"
-                      data-action="getChildrenCategory">
-                      بدل الزفاف
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="60"
-                          >ملحقات</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="109"
-                          >بدل فرح</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="40"
-                          >بدلة خطوبة\حنة</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="107"
-                          >فساتين سهرة</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  @section('style_css')
+  
+  <link rel="stylesheet" href="{{ asset('assets/css/search.css') }}" />
+  
+  @endsection
 
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-up"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="5"
-                      data-action="getChildrenCategory">
-                      الكوافيرات
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="176"
-                          >خطوبة/حنة</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="17"
-                          >عروسة</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-up"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="6"
-                      data-action="getChildrenCategory">
-                      بطاقات الأفراح
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="235"
-                          >دعوات ثانوية</a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="dropdown-item child" href="#" data-id="132"
-                          >دعوات فرح</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="7"
-                      data-action="getChildrenCategory">
-                      تزيين الورود
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="8"
-                      data-action="getChildrenCategory">
-                      تأجير الباصات
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="9"
-                      data-action="getChildrenCategory">
-                      استوديوهات التصوير
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="10"
-                      data-action="getChildrenCategory">
-                      المطابخ
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="11"
-                      data-action="getChildrenCategory">
-                      الفنادق
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="13"
-                      data-action="getChildrenCategory">
-                      فنون استعراضية
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="14"
-                      data-action="getChildrenCategory">
-                      المسارح
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="16"
-                      data-action="getChildrenCategory">
-                      بدل رجالي
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="245"
-                      data-action="getChildrenCategory">
-                      حلويات الأفراح
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="248"
-                      data-action="getChildrenCategory">
-                      مفروشات
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 pr-0">
-                  <div class="col-md-3 pr-0">
-                    <span class="dropdown-item-direction position-absolute"
-                      ><i class="fa fa-angle-double-down"></i>
-                    </span>
-                    <div
-                      class="dropdown-item parent text-start fw-normal fw-bold ms-2"
-                      data-id="283"
-                      data-action="getChildrenCategory">
-                      أدوات منزلية
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="row"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="navbar-toggler p-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <i
-            class="fas fa-bars menu-icon d-flex align-items-center justify-content-center"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul
-            class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center text-wrap">
-            <li class="nav-item">
-              <a class="nav-link btn-plus" aria-current="page" href="#"
-                ><button
-                  class="btn-login-as-vendor d-flex align-items-center justify-content-between border-0 text-white">
-                  <i
-                    class="fa fa-plus plus-icon me-1 text-white"
-                    aria-hidden="true"></i>
-                  سجل كمورد
-                </button></a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link align-items-center justify-content-center flex-column plus"
-                href="#"
-                ><i class="fa fa-plus plus-icon" aria-hidden="true"></i>
-                <p class="text">سجل كمورد</p></a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link align-items-center justify-content-center flex-column search"
-                href="#"
-                ><i class="fa fa-search" aria-hidden="true"></i>
-                <p class="text">البحث</p></a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link align-items-center justify-content-center flex-column fav position-relative"
-                aria-disabled="true"
-                ><i class="fa fa-heart" aria-hidden="true"></i>
-                <p class="text">المفضلة</p>
-                <span
-                  class="number position-absolute start-0 top-0 text-white rounded-circle text-center"
-                  >0</span
-                ></a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link align-items-center justify-content-center flex-column cart position-relative"
-                aria-disabled="true"
-                ><i class="fas fa-shopping-cart"></i>
-                <p class="text">سلة المشتريات</p>
-                <span
-                  class="number position-absolute start-0 top-0 text-white rounded-circle text-center"
-                  >0</span
-                ></a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link align-items-center justify-content-center flex-column login"
-                aria-disabled="true"
-                ><i class="fa fa-user" aria-hidden="true"></i>
-                <p class="text">تسجيل الدخول</p></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  @section('content')
 
     <div class="contianer-fluid section-search w-100 h-100">
       <div class="container">
@@ -588,206 +29,7 @@
 
     <div class="container-fluid categories p-4">
       <div class="container">
-        <div class="items text-nowrap text-center">
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c0.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">الأثاث المنزلي</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c1.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">الأجهزة الكهربائية</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c2.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">صالات الأفراح</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c3.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">بدل الزفاف</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c4.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">الكوافيرات</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c5.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">بطاقات الأفراح</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c6.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">تزيين الورود</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c7.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">تأجير الباصات</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c8.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">استوديوهات التصوير</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c9.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">المطابخ</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c10.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">الفنادق</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c11.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">فنون استعراضية</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c12.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">المسارح</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c13.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">بدل رجالي</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c14.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">حلويات الأفراح</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c15.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">مفروشات</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/c16.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">أدوات منزلية</p>
-            </a>
-          </div>
-          <div class="item d-inline-block">
-            <a href="#">
-              <img
-                src="img/categories.png"
-                class="items-images bg-light rounded-circle"
-                width="75"
-                height="75"
-                alt="" />
-              <p class="name-items">كل التصنيفات</p>
-            </a>
-          </div>
-        </div>
+      @include('items_categories')
       </div>
     </div>
 
@@ -800,31 +42,31 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="img/adv-search1.jpg"
+                src="{{ asset('assets/img/adv-search1.jpg') }}"
                 class="d-block w-100 h-100"
                 alt="" />
             </div>
             <div class="carousel-item">
               <img
-                src="img/adv-search2.jpg"
+                src="{{ asset('assets/img/adv-search2.jpg') }}"
                 class="d-block w-100 h-100"
                 alt="" />
             </div>
             <div class="carousel-item">
               <img
-                src="img/adv-search3.jpg"
+                src="{{ asset('assets/img/adv-search3.jpg') }}"
                 class="d-block w-100 h-100"
                 alt="" />
             </div>
             <div class="carousel-item">
               <img
-                src="img/adv-search4.jpg"
+                src="{{ asset('assets/img/adv-search4.jpg') }}"
                 class="d-block w-100 h-100"
                 alt="" />
             </div>
             <div class="carousel-item">
               <img
-                src="img/adv-search5.jpg"
+                src="{{ asset('assets/img/adv-search5.jpg') }}"
                 class="d-block w-100 h-100"
                 alt="" />
             </div>
@@ -885,7 +127,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -1016,7 +258,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/e19de6e1cd2909120094fe88053abcf8-thumb.jpg"
+                          src="{{ asset('assets/img/e19de6e1cd2909120094fe88053abcf8-thumb.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -1145,7 +387,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/03123f6b01a70166cd2656db490c3e52-thumb.jpg"
+                          src="{{ asset('assets/img/03123f6b01a70166cd2656db490c3e52-thumb.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -1276,7 +518,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -1407,7 +649,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -1538,7 +780,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -1669,7 +911,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -1800,7 +1042,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -1931,7 +1173,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -2062,7 +1304,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -2193,7 +1435,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -2324,7 +1566,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -2455,7 +1697,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -2586,7 +1828,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -2717,7 +1959,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -2848,7 +2090,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -2979,7 +2221,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -3110,7 +2352,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -3241,7 +2483,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -3372,7 +2614,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -3497,7 +2739,7 @@
                 </div>
               </div>
               <div class="product-adv my-3">
-                <img src="img/adv-home.jpg" width="100%" height="100%" alt="" />
+                <img src="{{ asset('assets//img/adv-home.jpg') }}" width="100%" height="100%" alt="" />
               </div>
               <div class="product">
                 <div class="card mb-3 w-100 h-100 p-2">
@@ -3506,7 +2748,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -3637,7 +2879,267 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/e19de6e1cd2909120094fe88053abcf8-thumb.jpg') }}"
+                          class="img-fluid rounded-start"
+                          alt="" />
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="card-body position-relative">
+                        <a href="#"
+                          ><span class="card-title">كوافيرات </span></a
+                        >
+                        <span>-</span>
+                        <a href="#"><span class="card-title"> عروسة</span></a>
+                        <div class="d-flex align-items-baseline mt-2">
+                          <a href="#"
+                            ><h4 class="product-name">باقة - 5 خدمات</h4></a
+                          >
+                          <h6
+                            class="supplier-name ps-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            ( كوافير جاردن هاوس )
+                          </h6>
+                        </div>
+                        <!-- Modal -->
+                        <div
+                          class="modal fade"
+                          id="exampleModal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1
+                                  class="modal-title fs-5"
+                                  id="exampleModalLabel">
+                                  أهلاً وسهلاً بك في أكورد
+                                </h1>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                يجب عليك تسجيل الدخول أولاً أو التسجيل في موقع
+                                أكورد
+                              </div>
+                              <div class="modal-footer">
+                                <a href="login.html"
+                                  ><button
+                                    type="button"
+                                    class="btn btn-login"
+                                    data-bs-dismiss="modal">
+                                    تسجيل الدخول
+                                  </button>
+                                  <button type="button" class="btn btn-login">
+                                    تسجيل
+                                  </button></a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="card-text mb-3">
+                          مكياج، تسريحة شعر، دهن جسم، مناكير، بدكير ومنكير
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body">₪4605</small>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-1">
+                      <div class="icons">
+                        <i
+                          class="far fa-heart"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"></i>
+                      </div>
+                      <!-- Modal -->
+                      <div
+                        class="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalLabel">
+                                أهلاً وسهلاً بك في أكورد
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              يجب عليك تسجيل الدخول أولاً أو التسجيل في موقع
+                              أكورد
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-login"
+                                data-bs-dismiss="modal">
+                                تسجيل الدخول
+                              </button>
+                              <button type="button" class="btn btn-login">
+                                تسجيل
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="card mb-3 w-100 h-100 p-2">
+                  <div class="row g-0">
+                    <div
+                      class="col-md-3 d-flex align-items-center justify-content-center">
+                      <div class="image">
+                        <img
+                          src="{{ asset('assets/img/03123f6b01a70166cd2656db490c3e52-thumb.jpg') }}"
+                          class="img-fluid rounded-start"
+                          alt="" />
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="card-body position-relative">
+                        <a href="#"
+                          ><span class="card-title"> تزيين الورود </span></a
+                        >
+                        <span>-</span>
+                        <a href="#"
+                          ><span class="card-title"> مسكة عروس</span></a
+                        >
+                        <div class="d-flex align-items-baseline mt-2">
+                          <a href="#"
+                            ><h4 class="product-name">مسكة عروس 55</h4></a
+                          >
+                          <h6
+                            class="supplier-name ps-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            ( فرح روز لمستلزمات الافراح )
+                          </h6>
+                        </div>
+                        <!-- Modal -->
+                        <div
+                          class="modal fade"
+                          id="exampleModal"
+                          tabindex="-1"
+                          aria-labelledby="exampleModalLabel"
+                          aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1
+                                  class="modal-title fs-5"
+                                  id="exampleModalLabel">
+                                  أهلاً وسهلاً بك في أكورد
+                                </h1>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                يجب عليك تسجيل الدخول أولاً أو التسجيل في موقع
+                                أكورد
+                              </div>
+                              <div class="modal-footer">
+                                <a href="login.html"
+                                  ><button
+                                    type="button"
+                                    class="btn btn-login"
+                                    data-bs-dismiss="modal">
+                                    تسجيل الدخول
+                                  </button>
+                                  <button type="button" class="btn btn-login">
+                                    تسجيل
+                                  </button></a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="card-text mb-3">
+                          ورد فلين ،حجم كبير ،غير مرجع
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body">₪4605</small>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-1">
+                      <div class="icons">
+                        <i
+                          class="far fa-heart"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"></i>
+                      </div>
+                      <!-- Modal -->
+                      <div
+                        class="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalLabel">
+                                أهلاً وسهلاً بك في أكورد
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              يجب عليك تسجيل الدخول أولاً أو التسجيل في موقع
+                              أكورد
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-login"
+                                data-bs-dismiss="modal">
+                                تسجيل الدخول
+                              </button>
+                              <button type="button" class="btn btn-login">
+                                تسجيل
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="card mb-3 w-100 h-100 p-2">
+                  <div class="row g-0">
+                    <div
+                      class="col-md-3 d-flex align-items-center justify-content-center">
+                      <div class="image">
+                        <img
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -3768,7 +3270,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -3899,7 +3401,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -4030,7 +3532,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -4161,7 +3663,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -4292,7 +3794,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -4423,7 +3925,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -4554,7 +4056,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -4685,7 +4187,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -4816,7 +4318,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -4947,7 +4449,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -5078,7 +4580,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -5209,7 +4711,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -5340,7 +4842,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -5471,7 +4973,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -5602,7 +5104,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -5733,7 +5235,7 @@
                       class="col-md-3 d-flex align-items-center justify-content-center">
                       <div class="image">
                         <img
-                          src="img/product-img.jpg"
+                          src="{{ asset('assets/img/product-img.jpg') }}"
                           class="img-fluid rounded-start"
                           alt="" />
                       </div>
@@ -5791,268 +5293,6 @@
                                     data-bs-dismiss="modal">
                                     تسجيل الدخول
                                   </button>
-                                  <button type="button" class="btn btn-login">
-                                    تسجيل
-                                  </button></a
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <p class="card-text mb-3">
-                          من شهر 11 إلى شهر 4، غزة، مكيَف، 600 كرسي، 68 طاولة
-                        </p>
-                        <p class="card-text">
-                          <small class="text-body">₪4605</small>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="icons">
-                        <i
-                          class="far fa-heart"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"></i>
-                      </div>
-                      <!-- Modal -->
-                      <div
-                        class="modal fade"
-                        id="exampleModal"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1
-                                class="modal-title fs-5"
-                                id="exampleModalLabel">
-                                أهلاً وسهلاً بك في أكورد
-                              </h1>
-                              <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              يجب عليك تسجيل الدخول أولاً أو التسجيل في موقع
-                              أكورد
-                            </div>
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-login"
-                                data-bs-dismiss="modal">
-                                تسجيل الدخول
-                              </button>
-                              <button type="button" class="btn btn-login">
-                                تسجيل
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="product">
-                <div class="card mb-3 w-100 h-100 p-2">
-                  <div class="row g-0">
-                    <div
-                      class="col-md-3 d-flex align-items-center justify-content-center">
-                      <div class="image">
-                        <img
-                          src="img/product-img.jpg"
-                          class="img-fluid rounded-start"
-                          alt="" />
-                      </div>
-                    </div>
-                    <div class="col-md-7">
-                      <div class="card-body position-relative">
-                        <a href="#"
-                          ><span class="card-title">صالات الأفراح </span></a
-                        >
-                        <span>-</span>
-                        <a href="#"
-                          ><span class="card-title"> قاعة أفراح</span></a
-                        >
-                        <div class="d-flex align-items-baseline mt-2">
-                          <a href="#"
-                            ><h4 class="product-name">صالة اللوتس</h4></a
-                          >
-                          <h6
-                            class="supplier-name ps-2"
-                            data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            (صالة اللوتس للأفراح)
-                          </h6>
-                        </div>
-                        <!-- Modal -->
-                        <div
-                          class="modal fade"
-                          id="exampleModal"
-                          tabindex="-1"
-                          aria-labelledby="exampleModalLabel"
-                          aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h1
-                                  class="modal-title fs-5"
-                                  id="exampleModalLabel">
-                                  أهلاً وسهلاً بك في أكورد
-                                </h1>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                  aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                يجب عليك تسجيل الدخول أولاً أو التسجيل في موقع
-                                أكورد
-                              </div>
-                              <div class="modal-footer">
-                                <a href="login.html"
-                                  ><button
-                                    type="button"
-                                    class="btn btn-login"
-                                    data-bs-dismiss="modal">
-                                    تسجيل الدخول
-                                  </button>
-                                  <button type="button" class="btn btn-login">
-                                    تسجيل
-                                  </button></a
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <p class="card-text mb-3">
-                          من شهر 11 إلى شهر 4، غزة، مكيَف، 600 كرسي، 68 طاولة
-                        </p>
-                        <p class="card-text">
-                          <small class="text-body">₪4605</small>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-md-1">
-                      <div class="icons">
-                        <i
-                          class="far fa-heart"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"></i>
-                      </div>
-                      <!-- Modal -->
-                      <div
-                        class="modal fade"
-                        id="exampleModal"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1
-                                class="modal-title fs-5"
-                                id="exampleModalLabel">
-                                أهلاً وسهلاً بك في أكورد
-                              </h1>
-                              <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              يجب عليك تسجيل الدخول أولاً أو التسجيل في موقع
-                              أكورد
-                            </div>
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-login"
-                                data-bs-dismiss="modal">
-                                تسجيل الدخول
-                              </button>
-                              <button type="button" class="btn btn-login">
-                                تسجيل
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="product">
-                <div class="card mb-3 w-100 h-100 p-2">
-                  <div class="row g-0">
-                    <div
-                      class="col-md-3 d-flex align-items-center justify-content-center">
-                      <div class="image">
-                        <img
-                          src="img/product-img.jpg"
-                          class="img-fluid rounded-start"
-                          alt="" />
-                      </div>
-                    </div>
-                    <div class="col-md-7">
-                      <div class="card-body position-relative">
-                        <a href="#"
-                          ><span class="card-title">صالات الأفراح </span></a
-                        >
-                        <span>-</span>
-                        <a href="#"
-                          ><span class="card-title"> قاعة أفراح</span></a
-                        >
-                        <div class="d-flex align-items-baseline mt-2">
-                          <a href="#"
-                            ><h4 class="product-name">صالة اللوتس</h4></a
-                          >
-                          <h6
-                            class="supplier-name ps-2"
-                            data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            (صالة اللوتس للأفراح)
-                          </h6>
-                        </div>
-                        <!-- Modal -->
-                        <div
-                          class="modal fade"
-                          id="exampleModal"
-                          tabindex="-1"
-                          aria-labelledby="exampleModalLabel"
-                          aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h1
-                                  class="modal-title fs-5"
-                                  id="exampleModalLabel">
-                                  أهلاً وسهلاً بك في أكورد
-                                </h1>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                  aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                يجب عليك تسجيل الدخول أولاً أو التسجيل في موقع
-                                أكورد
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-login"
-                                  data-bs-dismiss="modal">
-                                  تسجيل الدخول
-                                </button>
-                                <a href="login.html">
                                   <button type="button" class="btn btn-login">
                                     تسجيل
                                   </button></a
@@ -6120,7 +5360,7 @@
                 </div>
               </div>
               <div class="product-adv my-3">
-                <img src="img/adv-home.jpg" width="100%" height="100%" alt="" />
+                <img src="{{ asset('assets/img/adv-home.jpg') }}" width="100%" height="100%" alt="" />
               </div>
 
               <nav aria-label="Page navigation example">
@@ -6158,7 +5398,7 @@
                 <div class="ad">
                   <div class="image position-relative">
                     <img
-                      src="img/7db108b78439315a53c31d89dabbb8a2-thumb.jpg"
+                      src="{{ asset('assets/img/7db108b78439315a53c31d89dabbb8a2-thumb.jpg') }}"
                       alt="" />
                   </div>
                   <div class="descriptions">
@@ -6174,7 +5414,7 @@
                 <div class="ad">
                   <div class="image position-relative">
                     <img
-                      src="img/7db108b78439315a53c31d89dabbb8a2-thumb.jpg"
+                      src="{{ asset('assets/img/7db108b78439315a53c31d89dabbb8a2-thumb.jpg') }}"
                       alt="" />
                   </div>
                   <div class="descriptions">
@@ -6190,7 +5430,7 @@
                 <div class="ad">
                   <div class="image position-relative">
                     <img
-                      src="img/7db108b78439315a53c31d89dabbb8a2-thumb.jpg"
+                      src="{{ asset('assets/img/7db108b78439315a53c31d89dabbb8a2-thumb.jpg') }}"
                       alt="" />
                   </div>
                   <div class="descriptions">
@@ -6206,7 +5446,7 @@
                 <div class="ad">
                   <div class="image position-relative">
                     <img
-                      src="img/7db108b78439315a53c31d89dabbb8a2-thumb.jpg"
+                      src="{{ asset('assets/img/7db108b78439315a53c31d89dabbb8a2-thumb.jpg') }}"
                       alt="" />
                   </div>
                   <div class="descriptions">
@@ -6228,7 +5468,7 @@
                   <div class="d-flex">
                     <div class="image">
                       <img
-                        src="img/ab0bc4b9440562bfaf2b1049b1aa5dda-thumb.jpg"
+                        src="{{ asset('assets/img/ab0bc4b9440562bfaf2b1049b1aa5dda-thumb.jpg') }}"
                         alt="" />
                     </div>
                     <div class="descriptions">
@@ -6256,7 +5496,7 @@
                   <div class="d-flex">
                     <div class="image">
                       <img
-                        src="img/ab0bc4b9440562bfaf2b1049b1aa5dda-thumb.jpg"
+                        src="{{ asset('assets/img/ab0bc4b9440562bfaf2b1049b1aa5dda-thumb.jpg') }}"
                         alt="" />
                     </div>
                     <div class="descriptions">
@@ -6284,7 +5524,7 @@
                   <div class="d-flex">
                     <div class="image">
                       <img
-                        src="img/ab0bc4b9440562bfaf2b1049b1aa5dda-thumb.jpg"
+                        src="{{ asset('assets/img/ab0bc4b9440562bfaf2b1049b1aa5dda-thumb.jpg') }}"
                         alt="" />
                     </div>
                     <div class="descriptions">
@@ -6312,7 +5552,7 @@
                   <div class="d-flex">
                     <div class="image">
                       <img
-                        src="img/ab0bc4b9440562bfaf2b1049b1aa5dda-thumb.jpg"
+                        src="{{ asset('assets/img/ab0bc4b9440562bfaf2b1049b1aa5dda-thumb.jpg') }}"
                         alt="" />
                     </div>
                     <div class="descriptions">
@@ -6338,101 +5578,10 @@
                 <hr class="mt-1 mb-1" />
               </div>
             </div>
-            <img class="adv-call-center" src="img/adv-callcenter.jpg" alt="" />
+            <img class="adv-call-center" src="{{ asset('assets/img/adv-callcenter.jpg') }}" alt="" />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="header-line mb-3" style="height: 10px"></div>
-
-    <div class="footer mt-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-xl-4">
-            <h5>للاتصال بنا</h5>
-            <p>يسرنا تواصلك معنا من خلال أي من القنوات المتاحة.</p>
-            <div class="row mt-2">
-              <div class="col">
-                <div>
-                  <h3 class="fw-bold text-uppercase">أرقام التواصل</h3>
-                  <p class="fw-400 m-0">1700400600</p>
-                </div>
-                <div>
-                  <h3 class="fw-bold text-uppercase">العنوان</h3>
-                  <p class="fw-400 m-0">
-                    فلسطين، غزة، مقابل البوابة<br />الشمالية لجامعة الأزهر،
-                    <br />مجمع الرؤيا التجاري
-                  </p>
-                </div>
-              </div>
-              <div class="col">
-                <div>
-                  <h3 class="fw-bold text-uppercase">البريد الإلكتروني</h3>
-                  <p class="fw-400 m-0">info@accord.ps</p>
-                </div>
-                <div>
-                  <h3 class="fw-bold text-uppercase">ساعات العمل</h3>
-                  <p class="fw-400 m-0">السبت - الخميس</p>
-                  <p class="fw-400 m-0">9:00 صباحاً - 3:30 مساءً</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3 col-xl-2">
-            <h5>المعلومات</h5>
-            <a href="#"><p>من نحن؟</p></a>
-            <a href="#"><p>سياسة الخصوصية</p></a>
-            <a href="#"><p>للاتصال بنا</p></a>
-            <a href="#"><p>الأسئلة الشائعة</p></a>
-            <a href="#"><p>مورد جديد</p></a>
-          </div>
-          <div class="col-6 col-md-3 col-xl-2">
-            <h5>الملف الشخصي</h5>
-            <a href="#"><p>التسجيل</p></a>
-            <a href="#"><p>تسجيل الدخول</p></a>
-            <a href="#"><p>المفضلة</p></a>
-            <a href="#"><p>سلة المشتريات</p></a>
-            <a href="#"><p>البحث</p></a>
-          </div>
-          <div class="col-12 col-md-6 col-xl-4">
-            <h5>قائمة الواتس أب</h5>
-            <p>
-              انضم إلى قائمة الواتس أب الخاصة بالمنصة للبقاء على إطلاع بأحدث
-              الخصومات والعروض الخاصة.
-            </p>
-            <div class="input-sub d-flex align-items-center">
-              <input
-                type="text"
-                placeholder="رقم الواتس آب..."
-                class="whatsapp-input w-100" />
-              <button class="sub-btn border-0 text-nowrap text-white">
-                الإشتراك
-              </button>
-            </div>
-            <p class="text-social-media mb-0">وسائل التواصل الإجتماعي</p>
-            <div class="icons-contact d-flex align-items-center text-white">
-              <a href="https://www.facebook.com" target="_blank"
-                ><i class="fab fa-facebook-f facebook-icon icon text-white"></i
-              ></a>
-              <a href="https://www.instagram.com" target="_blank"
-                ><i class="fab fa-instagram instagram-icon icon text-white"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <h4 class="end-footer text-center">
-          Powered by Accord - Accord Group for Marketing & Trade
-        </h4>
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
-
-    <script src="js/search.js"></script>
-  </body>
-</html>
+    @endsection
